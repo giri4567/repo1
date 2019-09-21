@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  ASC                                                                  09/07/2019 12:10:33 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ASC.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ASC.ASM SET(SMALL) DEBUG PRINT(.\Listings\ASC.lst) OBJECT(.\Objects\ASC
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7850              2     MOV R0,#50H
+0002 E590              3     MOV A,P1
+0004 F6                4     MOV @R0,A
+0005 7908              5     MOV R1,#08H
+0007 13                6     LOOP3: RRC A
+0008 FA                7     MOV R2,A
+0009 5004              8     JNC LOOP1
+000B 7401              9     MOV A,#01H
+000D 8002             10     SJMP LOOP2
+000F 7400             11     LOOP1: MOV A,#00H
+0011 08               12     LOOP2: INC R0
+0012 F6               13     MOV @R0,A
+0013 F580             14     MOV P0,A
+0015 EA               15     MOV A,R2
+0016 D9EF             16     DJNZ R1,LOOP3
+                      17     END
+A51 MACRO ASSEMBLER  ASC                                                                  09/07/2019 12:10:33 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP1. . . . . . .  C ADDR   000FH   A   
+LOOP2. . . . . . .  C ADDR   0011H   A   
+LOOP3. . . . . . .  C ADDR   0007H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

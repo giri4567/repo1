@@ -1,0 +1,18 @@
+ORG 00H
+		;MULTIPLICATION
+				MOV R0,#50H
+				MOV A,@R0
+				INC R0
+				MOV B,@R0
+				MUL AB
+				MOV P0,A
+				MOV P1,B
+		;DIVISION
+				MOV R0,#50H
+				MOV A,@R0
+				INC R0
+				MOV B,@R0
+				DIV AB
+				MOV P2,A
+				MOV P3,B
+ END

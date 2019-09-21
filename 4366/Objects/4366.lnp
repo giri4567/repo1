@@ -1,0 +1,3 @@
+".\Objects\arthematic.obj" 
+TO ".\Objects\4366" 
+PRINT(".\Listings\4366.m51") RAMSIZE(256) 

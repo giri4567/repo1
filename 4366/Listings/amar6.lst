@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  AMAR6                                                                09/19/2019 10:07:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\amar6.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE amar6.asm SET(SMALL) DEBUG PRINT(.\Listings\amar6.lst) OBJECT(.\Objects
+                      \amar6.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7590FF            2     MOV P1,#0FFH
+0003 75A000            3     MOV P2,#00H
+0006 E590              4     UP:MOV A,P1
+0008 7808              5     MOV R0,#08H
+000A 13                6     LOOP: RRC A
+000B 5005              7     JNC LOOP1
+000D 75A002            8     MOV P2,#02H
+0010 8003              9     SJMP LOOP2
+0012 75A000           10     LOOP1:MOV P2,#00H
+0015 D8F3             11     LOOP2:DJNZ R0,LOOP
+0017 80ED             12     SJMP UP
+                      13     END
+A51 MACRO ASSEMBLER  AMAR6                                                                09/19/2019 10:07:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   000AH   A   
+LOOP1. . . . . . .  C ADDR   0012H   A   
+LOOP2. . . . . . .  C ADDR   0015H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+UP . . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

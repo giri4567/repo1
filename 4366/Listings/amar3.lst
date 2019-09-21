@@ -1,0 +1,37 @@
+A51 MACRO ASSEMBLER  AMAR3                                                                07/26/2019 10:54:54 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\amar3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE amar3.asm SET(SMALL) DEBUG PRINT(.\Listings\amar3.lst) OBJECT(.\Objects
+                      \amar3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7850              2                     MOV R0,#50H
+0002 E6                3                     MOV A,@R0
+0003 753050            4                     MOV 30H,#50H
+0006 B53005            5                     CJNE A,30H,NEXT1
+0009 758000            6                     MOV  P0,#00H
+000C 8003              7                     SJMP NEXT2
+000E 7580FF            8                     NEXT1:MOV P0,#0FFH
+0011                   9                     NEXT2:
+                      10             END
+A51 MACRO ASSEMBLER  AMAR3                                                                07/26/2019 10:54:54 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+NEXT1. . . . . . .  C ADDR   000EH   A   
+NEXT2. . . . . . .  C ADDR   0011H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

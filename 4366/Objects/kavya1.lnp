@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\sumn.obj" 
+TO ".\Objects\kavya1" 
+PRINT(".\Listings\kavya1.m51") RAMSIZE(256) 

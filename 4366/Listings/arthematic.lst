@@ -1,0 +1,52 @@
+A51 MACRO ASSEMBLER  ARTHEMATIC                                                           07/19/2019 10:54:52 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\arthematic.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE arthematic.asm SET(SMALL) DEBUG PRINT(.\Listings\arthematic.lst) OBJECT
+                      (.\Objects\arthematic.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00h
+                       2             ;Addition
+0000 7850              3                             MOV R0,#50H
+0002 7A00              4                             MOV R2,#00H
+0004 E6                5                             MOV A,@R0
+0005 08                6                             INC R0
+0006 26                7                             ADD A,@R0
+0007 5001              8                             JNC NEXT1
+0009 0A                9                             INC R2
+000A F580             10             NEXT1: MOV P0,A
+000C 8A90             11                                     MOV P1,R2
+                      12             ;Subtraction
+000E 7850             13                             MOV R0,#50H
+0010 7A00             14                             MOV R2,#00H
+0012 E6               15                             MOV A,@R0
+0013 08               16                             INC R0
+0014 96               17                             SUBB A,@R0
+0015 5001             18                             JNC NEXT2
+0017 0A               19                             INC R2
+0018 F5A0             20             NEXT2:  MOV P2,A
+001A 8AB0             21                                     MOV P3,R2
+                      22                                     END
+A51 MACRO ASSEMBLER  ARTHEMATIC                                                           07/19/2019 10:54:52 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+NEXT1. . . . . . .  C ADDR   000AH   A   
+NEXT2. . . . . . .  C ADDR   0018H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  SUM                                                                  09/19/2019 10:07:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\sum.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE sum.asm SET(SMALL) DEBUG PRINT(.\Listings\sum.lst) OBJECT(.\Objects\sum
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7850              2     MOV R0,#50H
+0002 7A00              3     MOV R2,#00H
+0004 E6                4     MOV A,@R0
+0005 F9                5     MOV R1,A
+0006 08                6     LOOP2:INC R0
+0007 26                7                 ADD A,@R0
+0008 5001              8                             JNC LOOP1
+000A 0A                9                             INC R2
+000B D9F9             10     LOOP1:DJNZ R1,LOOP2
+000D F5A0             11                 MOV P2,A
+000F 8AB0             12                             MOV P3,R2
+                      13                             END
+A51 MACRO ASSEMBLER  SUM                                                                  09/19/2019 10:07:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP1. . . . . . .  C ADDR   000BH   A   
+LOOP2. . . . . . .  C ADDR   0006H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

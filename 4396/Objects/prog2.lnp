@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\paralel.obj" 
+TO ".\Objects\prog2" 
+PRINT(".\Listings\prog2.m51") RAMSIZE(256) 

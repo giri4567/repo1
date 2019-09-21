@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\amar6.obj",
+".\Objects\sum.obj" 
+TO ".\Objects\amar6" 
+PRINT(".\Listings\amar6.m51") RAMSIZE(256) 

@@ -1,0 +1,30 @@
+C51 COMPILER V9.57.0.0   SUB                                                               07/12/2019 08:57:17 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE SUB
+OBJECT MODULE PLACED IN .\Objects\sub.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE sub.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\sub.l
+                    -st) TABS(2) OBJECT(.\Objects\sub.obj)
+
+line level    source
+
+   1          #include<AT89c51xd2.h>
+   2          void main()
+   3          {
+   4   1        int a=0x10,b=0x05;
+   5   1        P0=a-b;
+   6   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      8    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

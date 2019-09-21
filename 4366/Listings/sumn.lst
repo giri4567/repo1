@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  SUMN                                                                 09/19/2019 11:16:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\sumn.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE sumn.asm SET(SMALL) DEBUG PRINT(.\Listings\sumn.lst) OBJECT(.\Objects\s
+                      umn.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7850              2     MOV R0,#50H
+0002 86F0              3     MOV B,@R0
+0004 7A00              4     MOV R2,#00H
+0006 E4                5     CLR A
+0007 08                6     LOOP2:INC R0
+0008 26                7                 ADD A,@R0
+0009 5001              8                             JNC LOOP1
+000B 0A                9                             INC R2
+000C D5F0F8           10     LOOP1:DJNZ B,LOOP2
+000F F5A0             11                 MOV P2,A
+0011 8AB0             12                             MOV P3,R2
+                      13                             END
+A51 MACRO ASSEMBLER  SUMN                                                                 09/19/2019 11:16:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP1. . . . . . .  C ADDR   000CH   A   
+LOOP2. . . . . . .  C ADDR   0007H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

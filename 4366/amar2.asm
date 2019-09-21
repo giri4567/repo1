@@ -1,0 +1,25 @@
+ORG 00H
+		;LOGICAL AND
+				MOV R0,#50H
+				MOV A,@R0
+				INC R0
+				ANL A,@R0
+				MOV P0,A
+		;LOGICAL OR
+				MOV R0,#50H
+				MOV  A,@R0
+				INC R0
+				ORL A,@R0
+				MOV P1,A
+		;LOGICAL XOR
+				MOV R0,#50H
+				MOV A,@R0
+				INC R0
+				XRL A,@R0
+				MOV P2,A
+		;LOGICAL NOT 
+				MOV R0,#50H
+				MOV A,@R0
+				CPL A
+				MOV P3,A
+END

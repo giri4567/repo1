@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  AMAR2                                                                07/26/2019 09:48:45 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\amar2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE amar2.asm SET(SMALL) DEBUG PRINT(.\Listings\amar2.lst) OBJECT(.\Objects
+                      \amar2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+                       2                     ;LOGICAL AND
+0000 7850              3                                     MOV R0,#50H
+0002 E6                4                                     MOV A,@R0
+0003 08                5                                     INC R0
+0004 56                6                                     ANL A,@R0
+0005 F580              7                                     MOV P0,A
+                       8                     ;LOGICAL OR
+0007 7850              9                                     MOV R0,#50H
+0009 E6               10                                     MOV  A,@R0
+000A 08               11                                     INC R0
+000B 46               12                                     ORL A,@R0
+000C F590             13                                     MOV P1,A
+                      14                     ;LOGICAL XOR
+000E 7850             15                                     MOV R0,#50H
+0010 E6               16                                     MOV A,@R0
+0011 08               17                                     INC R0
+0012 66               18                                     XRL A,@R0
+0013 F5A0             19                                     MOV P2,A
+                      20                     ;LOGICAL NOT 
+0015 7850             21                                     MOV R0,#50H
+0017 E6               22                                     MOV A,@R0
+0018 F4               23                                     CPL A
+0019 F5B0             24                                     MOV P3,A
+                      25     END
+A51 MACRO ASSEMBLER  AMAR2                                                                07/26/2019 09:48:45 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  ASD                                                                  07/12/2019 10:40:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\asd.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE asd.s SET(SMALL) DEBUG PRINT(.\Listings\asd.lst) OBJECT(.\Objects\asd.o
+                      bj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7410              2     MOV A,#10H
+0002 75F005            3     MOV B,#05H
+0005 25F0              4     ADD A,B
+0007 F580              5     MOV P0,A
+0009 95F0              6     SUBB A,B
+000B F590              7     MOV P1,A
+000D A4                8     MUL AB
+000E F5A0              9     MOV P2,A
+0010 84               10     DIV AB
+0011 F5B0             11     MOV P3,A
+                      12     END
+A51 MACRO ASSEMBLER  ASD                                                                  07/12/2019 10:40:38 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

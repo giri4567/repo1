@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  AMAR1                                                                07/26/2019 09:06:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\amar1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE amar1.asm SET(SMALL) DEBUG PRINT(.\Listings\amar1.lst) OBJECT(.\Objects
+                      \amar1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+                       2                     ;MULTIPLICATION
+0000 7850              3                                     MOV R0,#50H
+0002 E6                4                                     MOV A,@R0
+0003 08                5                                     INC R0
+0004 86F0              6                                     MOV B,@R0
+0006 A4                7                                     MUL AB
+0007 F580              8                                     MOV P0,A
+0009 85F090            9                                     MOV P1,B
+                      10                     ;DIVISION
+000C 7850             11                                     MOV R0,#50H
+000E E6               12                                     MOV A,@R0
+000F 08               13                                     INC R0
+0010 86F0             14                                     MOV B,@R0
+0012 84               15                                     DIV AB
+0013 F5A0             16                                     MOV P2,A
+0015 85F0B0           17                                     MOV P3,B
+                      18      END
+A51 MACRO ASSEMBLER  AMAR1                                                                07/26/2019 09:06:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
